@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block body%}
+
+
+
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Welcome to the Corona Archive App</h2>
+                    <p>No matter what kind of account you have, simply login using the portal here. If you don't have an account yet, create one today.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                
+                    <div class="pricing-item-pro">
+                      
+                      <h4>New Here?</h4>
+                        <div class="border-button">
+                            <a href="{{ url_for('signup_landing') }}">Create an account</a>
+                        </div>
+
+                        <h4></h4>
+                        <h4>Already have an Account?</h4>
+                        <p> You will only have to login once</p>
+                        <form method = "post" action="" >
+                            {{form.hidden_tag()}}
+                            {{form.email(class = input,placeholder = "Email")}}
+                            <br />
+                            {{form.password(class = input,placeholder = "Password")}}
+                           
+                            <div class="border-button">
+                                {{form.SubmitField(class = "btn btn-primary",value = "Login")}}
+                            </div>
+                            
+                        </form>
+                      
+                    </div>
+                  </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+
+    <div id="services" class="services section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h4>Amazing <em>Services &amp; Features</em> for you</h4>
+                <img src="assets/images/heading-line-dec.png" alt="">
+                <p>We are working our best to ensure that you get the best possible service from us </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="service-item first-service">
+                <div class="icon"></div>
+                <h4>Easy to use</h4>
+                <p>Any one can use this platform. Here is some more filler text sp that the components all have the same size</p>
+                <div class="text-button">
+                  <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="service-item second-service">
+                <div class="icon"></div>
+                <h4>Fast and Stable Analytics</h4>
+                <p>For the agent. Here is some more filler text sp that the components all have the same size</p>
+                <div class="text-button">
+                  <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="service-item third-service">
+                <div class="icon"></div>
+                <h4>Well connected</h4>
+                <p>Hospitals can directly mark people as infected. List of places is also provided.</p>
+                <div class="text-button">
+                  <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="service-item fourth-service">
+                <div class="icon"></div>
+                <h4>24/7 Help &amp; Support</h4>
+                <p>Night or day, call us anytime to let us know how bad the app is perfoming. Also some filler texts</p>
+                <div class="text-button">
+                  <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+   
+
+{% endblock%}

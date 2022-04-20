@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<body>
+	<div id="pricing" class="pricing-tables">
+		<div class="container">
+		  <div class="row">
+			<div class="col-lg-8 offset-lg-2">
+			  <div class="section-heading">
+				<h4>These are the Places we host right now</h4>
+				<img src="assets/images/heading-line-dec.png" alt="">
+				<p></p>
+				<p>Scan an account at a resturaunt to start a session. It is free and always will be. Here is some more filler text just for decoration</p>
+				
+			  </div>
+			</div>
+			{%for place in places%}
+			<div class="col-lg-4">
+			  <div class="pricing-item-regular">
+				
+				<h4>{{place.name}}</h4>
+					  <div class="icon">
+						<img src="{{  qrcode(place.email) }}" alt="">
+					  </div>
+					  <ul>
+						<li>{{place.email}}</li>
+					  </ul>
+					  <div class="border-button">
+						<a href="#">copy</a>
+					  </div>
+			  </div>
+			</div>
+			{%endfor%}
+			
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div> 
+	</body>
+	
+
+	{% endblock %}	
+

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<body>
+<div id="pricing" class="pricing-tables">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Let's find the type of account you're looking for</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+			<p></p>
+            <p>Create an accont with us today and start your Journey. It is free and always will be. Here is some more filler text just for decoration</p>
+			
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-regular">
+            
+            <h4>Establishment</h4>
+           
+            <ul>
+              <li>Do you own a bussiness and want to generate a qr code? </li>
+            </ul>
+            <div class="border-button">
+              <a href="{{ url_for('signup_places') }}">Register as Establishment</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro">
+            
+            <h4>Visitor</h4>
+           
+            <ul>
+              <li>Do you want to visit the establishemnts? </li>
+            </ul>
+            <div class="border-button">
+              <a href="{{ url_for('signup') }}">Register as Visitor</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-regular">
+            
+            <h4>Hospital</h4>
+           
+            <ul>
+              <li>Do you perform a tests and report the result? </li>
+            </ul>
+           
+            <div class="border-button">
+              <a href="#">Contact an Agent</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div id="pricing" class="pricing-tables">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="section-heading">
+       
+          <div class="col-lg-4">
+     
+          
+          
+            <table class="table">
+              <tr>
+                <th>User</th>
+                <th>User-Phone</th>
+                <th>User-Infected</th>
+                <th>Establishment</th>
+                <th>Establishment-Phone</th>
+                <th>Check-In Time</th>
+                <th>Checkout Time</th>
+              </tr>
+              {%for visit in visits%}
+              <tr>
+                <td>{{visit.user.name}}</td>
+                <td>{{visit.user.phoneNumber}}</td>
+                <td>{{visit.user.infected}}</td>
+                <td>{{visit.place.name}}</td>
+                <td>{{visit.place.phoneNumber}}</td>
+                <td>{{visit.entryTime}}</td>
+                <td>{{visit.exitTime}}</td>
+              </tr>
+              {%endfor%}
+            </table>        
+        </div>        
+        </div>
+      </div>   
+    </div>
+  </div>
+</div> 
+
+
+
+<div id="about" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="section-heading">
+          <h4>What does the <em>Table</em> Show me?</h4>
+          
+          <img src="{{ url_for('static', filename='assets/images/heading-line-dec.png') }}" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Infected Users</a></h4>
+              <p>Lorem Ipsum Text</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Visistations</a></h4>
+              <p>Lorem Ipsum Text</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">Visitation length</a></h4>
+              <p>Lorem Ipsum Text</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-item">
+              <h4><a href="#">High risk people</a></h4>
+              <p>Lorem Ipsum Text</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="right-image">
+          <img src="{{ url_for('static', filename='assets/images/about-right-dec.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   
+
+{% endblock %}

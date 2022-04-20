@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Good to have you here</h2>
+                    <p>No matter what kind of account you have, simply login using the portal here. If you don't have an account yet, create one today.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                
+                    <div class="pricing-item-pro">
+                        <h4>Already Have an account?</h4>
+                        <div class="border-button">
+                            <a href="/">Log in</a>
+                        </div>
+
+                        <h4></h4>
+                      
+                      
+                        <h4>Signup</h4>
+                        <form method = "post" action="" >
+                            {{form.hidden_tag()}}
+                            <br />
+                            {{form.name(class = input,placeholder = "Name")}}
+                            <br />
+                            {{form.address(class = input,placeholder = "Adress")}}
+                            <br />
+                            {{form.phone_number(class = input,placeholder = "Phone Number")}}
+                            <br />
+                            {{form.email(class = input,placeholder = "Email")}}
+                            <br />
+                            {{form.password(class = input,placeholder = "Password")}}
+                            <br />
+                            {{form.confirmPassword(class = input,placeholder = "Confirm Password")}}
+                            <br />
+                           
+                            <div class="border-button">
+                                {{form.SubmitField(class = "btn btn-primary",value = "Login")}}
+                            </div>
+                            
+                        </form>
+                      
+                    </div>
+                  </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" />
+        <br />
+
+        <label>Email Address</label>
+        <input type="email" />
+        <br />
+
+        <label>Password</label>
+        <input type="password" />
+        <br />
+        <div class="action_btns">
+            {{form.SubmitField(class = "btn btn-primary",value = "Login")}}
+            
+        </div>
+    </form>
+
+<div class="container">
+    <h2>Signup</h2>
+    <form method = "post" action="">
+        {{form.hidden_tag()}}
+        {{form.name(class = input,placeholder = "Name")}}
+        {{form.address(class = input,placeholder = "Adress")}}
+        {{form.phone_number(class = input,placeholder = "Phone Number")}}
+        {{form.email(class = input,placeholder = "Email")}}
+        {{form.password(class = input,placeholder = "Password")}}
+        {{form.confirmPassword(class = input,placeholder = "Confirm Password")}}
+        {{form.SubmitField(class = "customButton")}}
+      
+    </form>
+</div>
+
+
+
+{% endblock %}
